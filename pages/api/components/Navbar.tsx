@@ -25,22 +25,22 @@ export const Navbar =() =>{
 
     return(
         < >
-            <Flex justifyContent={"space-between"} padding={"20px"} flexDirection={"row"} width={"100%"} bgColor={"gray.100"} height={"fit-content"} >
+            <Flex justifyContent={"space-between"} padding={"20px"} borderBottomColor={"gray.200"} boxShadow={"xl"} borderBottomWidth={"2px"} flexDirection={"row"} width={"100%"} bgColor={"white"} height={"fit-content"} >
 
                     <Button variant={"ghost"} colorScheme={"purple"} >VibeSea</Button>
                     
 
                     <ButtonGroup variant={"solid"}   >
-                        <Button bgColor={"gray.200"} >Home</Button>
-                        <Button bgColor={"gray.200"}>Profile</Button>
-                        <Button bgColor={"gray.200"}>Explore</Button>
-                        <Button bgColor={"gray.200"}>More</Button>
+                        <Button bgColor={"gray.100"} >Home</Button>
+                        <Button bgColor={"gray.100"}>Profile</Button>
+                        <Button bgColor={"gray.100"}>Explore</Button>
+                        <Button bgColor={"gray.100"}>More</Button>
                     </ButtonGroup>
 
-                    <InputGroup ml={"100px"} width={"300px"}>
+                    {/* <InputGroup ml={"100px"} width={"300px"}>
                         <InputLeftAddon children="Search" />
                         <Input bgColor={"white"} />
-                    </InputGroup>
+                    </InputGroup> */}
                 {isWalletConnected && walletAddress && chain && currentWallet ?(<><ConnectedModal/></>):<NotConnectedModal/>}
 
             </Flex>
