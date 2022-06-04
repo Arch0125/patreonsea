@@ -25,7 +25,7 @@ export const Navbar =() =>{
 
     return(
         < >
-            <Flex justifyContent={"space-between"} padding={"20px"} borderBottomColor={"gray.200"} boxShadow={"xl"} borderBottomWidth={"2px"} flexDirection={"row"} width={"100%"} bgColor={"white"} height={"fit-content"} >
+            <Flex justifyContent={"space-between"} padding={"20px"} borderBottomColor={"gray.200"} borderBottomWidth={"2px"} flexDirection={"row"} width={"100%"} bgColor={"white"} height={"fit-content"} >
 
                     <Button variant={"ghost"} colorScheme={"purple"} >VibeSea</Button>
                     
