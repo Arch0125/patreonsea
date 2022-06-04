@@ -23,7 +23,7 @@ const Home: NextPage<Props> = (props:Props) => {
   }
 
   return (
-    <Flex bgColor={"black"} height={"100vh"} >
+    <Flex bgColor={"white"} height={"100vh"} >
       <Navbar/>
     </Flex>
   )

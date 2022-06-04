@@ -31,7 +31,7 @@ import {
     const { isOpen, onOpen, onClose } = useDisclosure()
     return (
         <>
-          <Button onClick={onOpen}>Connect Wallet</Button>
+          <Button variant={"solid"} colorScheme={"purple"} onClick={onOpen}>Connect Wallet</Button>
     
           <Modal isOpen={isOpen} onClose={onClose} isCentered>
             <ModalOverlay />

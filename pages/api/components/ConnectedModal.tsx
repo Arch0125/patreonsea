@@ -38,7 +38,7 @@ export const ConnectedModal =() =>{
     return(
         
         <>
-         <Button onClick={onOpen}>{walletAddress?.substring(0,7)+'...'+walletAddress?.substring(37)}</Button>
+         <Button variant={"solid"} colorScheme={"purple"} onClick={onOpen}>{walletAddress?.substring(0,7)+'...'+walletAddress?.substring(37)}</Button>
         <Modal isOpen={isOpen} onClose={onClose} isCentered>
             <ModalOverlay />
             <ModalContent>

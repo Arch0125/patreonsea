@@ -1,4 +1,4 @@
-import { Box, Button, Flex } from '@chakra-ui/react';
+import { Box, Button, ButtonGroup, Flex, Input, InputGroup, InputLeftAddon } from '@chakra-ui/react';
 import * as React from 'react';
 import { NotConnectedModal } from './NotConnectedModal';
 import { useWeb3 } from './context/Web3.context';
@@ -25,14 +25,24 @@ export const Navbar =() =>{
 
     return(
         < >
-            <Flex padding={"20px"} borderRadius={"20px"} flexDirection={"row"} width={"99%"} bgColor={"blueviolet"} height={"fit-content"} margin={"10px"} >
-                <Box width={"50%"}>
-                    <Button>OnChain</Button>
-                </Box>
-                <Box paddingLeft={"40vw"} flexDirection={"row"}>
-                
+            <Flex justifyContent={"space-between"} padding={"20px"} flexDirection={"row"} width={"100%"} bgColor={"gray.100"} height={"fit-content"} >
+
+                    <Button variant={"ghost"} colorScheme={"purple"} >VibeSea</Button>
+                    
+
+                    <ButtonGroup variant={"solid"}   >
+                        <Button bgColor={"gray.200"} >Home</Button>
+                        <Button bgColor={"gray.200"}>Profile</Button>
+                        <Button bgColor={"gray.200"}>Explore</Button>
+                        <Button bgColor={"gray.200"}>More</Button>
+                    </ButtonGroup>
+
+                    <InputGroup ml={"100px"} width={"300px"}>
+                        <InputLeftAddon children="Search" />
+                        <Input bgColor={"white"} />
+                    </InputGroup>
                 {isWalletConnected && walletAddress && chain && currentWallet ?(<><ConnectedModal/></>):<NotConnectedModal/>}
-                </Box>
+
             </Flex>
         </>
     )
